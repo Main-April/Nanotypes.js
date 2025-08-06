@@ -1,7 +1,6 @@
-class $ {
+class DOMElement {
   constructor(e) {
     this.e = e;
-    this.link = {};
   }
 
   exe(callback) {
@@ -63,26 +62,34 @@ class $ {
 
   click(callback) {
     this.exe(element => {
-      element.onclick = callback;
+      element.addEventListener("click",callback);
     });
     return this;
   }
 
-  toggle(el) {
-    if (!el) {
+  toggle(s) {
+    if (!s) {
       this.exe((element) => {
-        const currentDisplay = getComputedStyle(element).display;
-        element.style.display = currentDisplay === "none" ? "block" : "none";
+        element.style.display = getComputedStyle(element).display == "none" ? "block" : "none";
       });
-    } else {
+    } 
+    else {
       _(el).exe((element) => {
-        const currentDisplay = getComputedStyle(element).display;
-        element.style.display = currentDisplay === "none" ? "block" : "none";
+        element.style.display = getComputedStyle(element).display == "none" ? s : "none";
       });
     }
     return this;
   }
- 
+ replace(e){
+  if(!e){
+   this.exe((element) => {
+    element.remove();
+   });
+  }
+  this.exe((element)=>{
+   element.replaceWidth(e instanceof DOMElement ? e.elements[0] : e);
+  });
+  return this;
 }
 
 function _(e) {
@@ -91,5 +98,5 @@ function _(e) {
   else {
     e =Array.from(e);
       }
-  return new $(e);
+  return new DOMElement(e);
   }
