@@ -82,8 +82,7 @@ class $ {
     }
     return this;
   }
-
-
+ 
 }
 
 function _(e) {
