@@ -1,4 +1,4 @@
-class DOMElement {
+class $ {
   constructor(e) {
     this.e = e;
   }
@@ -74,12 +74,13 @@ class DOMElement {
       });
     } 
     else {
-      _(el).exe((element) => {
+      this.exe((element) => {
         element.style.display = getComputedStyle(element).display == "none" ? s : "none";
       });
     }
     return this;
   }
+// Replace an DOM Element
  replace(e){
   if(!e){
    this.exe((element) => {
@@ -87,16 +88,32 @@ class DOMElement {
    });
   }
   this.exe((element)=>{
-   element.replaceWidth(e instanceof DOMElement ? e.elements[0] : e);
+   element.parentNode.replaceCHild(element,e);
   });
   return this;
 }
+    
+}
 
-function _(e) {
-  if(typeof e = = ‘string’){
-    e = Array.from(document.querySelectorAll(e));}
-  else {
-    e =Array.from(e);
-      }
-  return new DOMElement(e);
-  }
+// Setup fonction _
+function _ (_e_) {
+  return new $(new _$_.select(_e_));
+}
+// Setup JS DOM Environment
+class _$_ {
+    constructor(e){
+    this.e = e;
+    }
+
+    select(s) {
+    if (document.getElementById(s)) return document.getElementById(s);
+    if (document.getElementsByClassName(s).length > 0) return Array.from(document.getElementsByClassName(s));
+    return Array.from(document.querySelectorAll(s));
+    }
+    repeat(n, c) {
+    for (let i = 0; i < n; i++) {
+      c();
+        }
+    }
+}
+
