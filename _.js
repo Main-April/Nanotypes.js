@@ -1,3 +1,5 @@
+// Underscore.js version 0.05
+
 class $ {
   constructor(e) {
     this.e = e;
@@ -80,7 +82,6 @@ class $ {
     }
     return this;
   }
-// Replace an DOM Element
  replace(e){
   if(!e){
    this.exe((element) => {
@@ -116,4 +117,7 @@ class _$_ {
         }
     }
 }
-
+// Setup global utilisation
+window._ = _;
+window._$_ = _$_;
+window.$ = $;
