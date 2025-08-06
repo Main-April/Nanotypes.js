@@ -88,7 +88,7 @@ class $ {
    });
   }
   this.exe((element)=>{
-   element.parentNode.replaceCHild(element,e);
+   element.parentNode.replaceChild(element,e);
   });
   return this;
 }
