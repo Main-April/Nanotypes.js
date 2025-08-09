@@ -25,16 +25,11 @@ Include these script tags in your HTML file:
 </head>
 <body>
     <!-- Your content -->
-    
-    <!-- Underscore.js Core -->
     <script src="https://raw.githubusercontent.com/Main-April/Underscore-Little-Tools-for-Devloppers/refs/heads/main/Main/_.js"></script>
-    
-    <!-- Underscore.js Plugins -->
     <script src="https://raw.githubusercontent.com/Main-April/Underscore-Little-Tools-for-Devloppers/refs/heads/main/Main/plugin.js"></script>
     
     <script>
-        // Start using Underscore.js
-        _('#myElement').css('color', 'blue');
+        _('*').css('color', 'blue');
     </script>
 </body>
 </html>
@@ -44,20 +39,22 @@ Include these script tags in your HTML file:
 
 ### Basic Syntax
 
-Select elements using the `_()` function:
+You don't have need '.' and '#' before the name of class or id.
+Select elements using the `_()` function, like $ Jquey syntax :
 
 ```javascript
 // Select by ID
+_('myButton')
+// Or ...
 _('#myButton')
 
 // Select by class name
-_('.my-class')
+_('my-class')
+// Or ...
+_('.my-class') 
 
 // Select by HTML tag
 _('div')
-
-// Select with complex selectors
-_('div.container > p')
 ```
 
 ### Method Chaining
