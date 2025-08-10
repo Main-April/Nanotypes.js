@@ -98,7 +98,8 @@ export class $ {
 
 // Setup fonction _
 export function _ (_e_) {
-  return new $(new _$_.select(_e_));
+  let d = new _$_.select(_e_);
+  return new $(d);
 }
 // Setup JS DOM Environment
 export class _$_ {
@@ -122,3 +123,4 @@ export class _$_ {
 window._ = _;
 window._$_ = _$_;
 window.$ = $;
+
