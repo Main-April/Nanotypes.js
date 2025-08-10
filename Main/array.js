@@ -7,6 +7,9 @@ Array.prototype.shuffle = function () {
     [this[i], this[r]] = [this[r], this[i]];
   }
 };
+Array.prototype.max = function () {
+  for(let i = this.length-1; i>0; i--) {}
+}
 
 
 
