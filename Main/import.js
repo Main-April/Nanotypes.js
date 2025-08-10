@@ -1,5 +1,5 @@
-import * from "./_.js";
-import * from "./plugin.js";
+import * from "https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/_.js";
+import * from "https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/plugin.js";
 
 async function call(m) {
   try {
