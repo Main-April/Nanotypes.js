@@ -1,6 +1,6 @@
 // Underscore.js version 0.05
 
-class $ {
+export class $ {
   constructor(e) {
     this.e = e;
   }
@@ -97,11 +97,11 @@ class $ {
 }
 
 // Setup fonction _
-function _ (_e_) {
+export function _ (_e_) {
   return new $(new _$_.select(_e_));
 }
 // Setup JS DOM Environment
-class _$_ {
+export class _$_ {
     constructor(e){
     this.e = e;
     }
@@ -117,6 +117,7 @@ class _$_ {
         }
     }
 }
+
 // Setup global utilisation
 window._ = _;
 window._$_ = _$_;
