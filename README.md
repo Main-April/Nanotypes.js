@@ -25,8 +25,8 @@ Include these script tags in your HTML file:
 </head>
 <body>
     <!-- Your content -->
-    <script src="https://raw.githubusercontent.com/Main-April/Underscore-Little-Tools-for-Devloppers/refs/heads/main/Main/_.js"></script>
-    <script src="https://raw.githubusercontent.com/Main-April/Underscore-Little-Tools-for-Devloppers/refs/heads/main/Main/plugin.js"></script>
+    <script src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/_.js"></script>
+    <script src="https://github.com/Main-April/Nanofy.js/blob/main/Main/plugin.js"></script>
     
     <script>
         _('*').css('color', 'blue');
