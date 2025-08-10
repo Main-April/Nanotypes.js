@@ -6,15 +6,12 @@ A lightweight JavaScript library designed to simplify web development without No
 
 Include these script tags in your HTML file:
 
-### Main Library (Required)
+### Import Library
 ```html
-<script src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/_.js"></script>
+<script type="module" src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/import.js"></script>
 ```
 
-### Plugin Extensions (Optional)
-```html
-<script src="https://github.com/Main-April/Nanofy.js/blob/main/Main/plugin.js"></script>
-```
+
 
 ### Complete Setup Example
 ```html
@@ -25,8 +22,7 @@ Include these script tags in your HTML file:
 </head>
 <body>
     <!-- Your content -->
-    <script src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/_.js"></script>
-    <script src="https://github.com/Main-April/Nanofy.js/blob/main/Main/plugin.js"></script>
+    <script type="module" src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/import.js"></script>
     
     <script>
         _('*').css('color', 'blue');
