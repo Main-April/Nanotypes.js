@@ -7,3 +7,12 @@ Array.prototype.shuffle = function () {
     [this[i], this[r]] = [this[r], this[i]];
   }
 };
+
+function call(m) {
+  try {
+    import * as m from "./modules/"+m;
+  }
+  catch(error){
+    console.error("[Minify.js] Can't find module " + m; 
+  }
+}
