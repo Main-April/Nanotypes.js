@@ -8,13 +8,5 @@ Array.prototype.shuffle = function () {
   }
 };
 
-async function call(m) {
-  try {
-    const o = await import("./${m}.js")
-  }
-  catch(error){
-    console.error("[Minify.js] Can't find module ${m}"); 
-  }
-}
 
 
