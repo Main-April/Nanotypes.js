@@ -1,4 +1,4 @@
-# Underscore.js
+# Minify.js
 
 A lightweight JavaScript library designed to simplify web development without Node.js or Python dependencies. Use the familiar `_()` syntax for element selection like jQuery, with full method chaining support.
 
