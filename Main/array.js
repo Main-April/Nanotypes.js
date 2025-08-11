@@ -27,9 +27,12 @@ Array.prototype.min = function () {
   return m;
   };
 
-Array.prototype.insert = function (i,v) {
-  
+Array.prototype.each = function (c) {
+  for (let i = 1; i < this.length; i++) {
+    c(i);
+  }
 }
+
 
 
 
