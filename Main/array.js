@@ -1,12 +1,14 @@
 // Setup environment and fct like python.
 // Add a shuffle fct
-Array.prototype.shuffle = function () {
+Array.prototype.shuffle = function (e) {
   let r;
   for (let i = this.length - 1; i > 0; i--) {
-    r = Math.floor(Math.random() * this.length);
+    if(!e) r = Math.floor(Math.random() * this.length);
+    else r = Math.floor(Math.random(e) * this.length);
     [this[i], this[r]] = [this[r], this[i]];
   }
 };
+
 Array.prototype.max = function () {
   let m = this[0];
   for (let i = 1; i < this.length; i++) {
@@ -24,6 +26,10 @@ Array.prototype.min = function () {
   }
   return m;
   };
+
+Array.prototype.insert = function (i,v) {
+  
+}
 
 
 
