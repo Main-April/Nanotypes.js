@@ -8,8 +8,25 @@ Array.prototype.shuffle = function () {
   }
 };
 Array.prototype.max = function () {
-  for(let i = this.length-1; i>0; i--) {}
-}
+  let m = 0;
+  for(let i = this.length-1; i>0; i--) {
+    if (this[i] > m) {
+      m = this[i];
+    }
+  }
+  return m;
+};
+Array.prototype.min = function () {
+  let m = Array.max();
+  for(let i = this.length-1; i>0; i--) {
+    if (this[i] < m) {
+      m = this[i];
+    }
+  }
+  return m;
+};
+
+
 
 
 
