@@ -8,23 +8,22 @@ Array.prototype.shuffle = function () {
   }
 };
 Array.prototype.max = function () {
-  let m = 0;
-  for(let i = this.length-1; i>0; i--) {
-    if (this[i] > m) {
-      m = this[i];
-    }
+  let m = this[0];
+  for (let i = 1; i < this.length; i++) {
+    if (this[i] > m) m = this[i];
+    if(typeof this[i] != "number") throw new TypeError("[Minify.js] Array.max cannot execute other of number")
   }
   return m;
 };
+
 Array.prototype.min = function () {
-  let m = Array.max();
-  for(let i = this.length-1; i>0; i--) {
-    if (this[i] < m) {
-      m = this[i];
-    }
+  let m = this[0];
+  for (let i = 1; i < this.length; i++) {
+    if (this[i] < m) m = this[i];
+    if(typeof this[i] != "number") throw new TypeError("[Minify.js] Array.min cannot execute other of number")
   }
   return m;
-};
+  };
 
 
 
