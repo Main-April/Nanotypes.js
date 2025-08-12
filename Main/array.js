@@ -1,12 +1,11 @@
 // Setup environment and fct like python.
 // Add a shuffle fct
-Array.prototype.shuffle = function (e) {
-  let r;
+Array.prototype.shuffle = function () {
   for (let i = this.length - 1; i > 0; i--) {
-    if(!e) r = Math.floor(Math.random() * this.length);
-    else r = Math.floor(Math.random(e) * this.length);
+    const r = Math.floor(Math.random() * (i+1));
     [this[i], this[r]] = [this[r], this[i]];
   }
+  return this;
 };
 
 Array.prototype.max = function () {
@@ -28,31 +27,24 @@ Array.prototype.min = function () {
 };
 
 Array.prototype.each = function (c) {
-  for (let i = 1; i < this.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     c(i);
   }
 };
 
 Array.prototype.random = function (n) {
-  if (!n) return this[Math.floor(Math.random()*this.length)];
-  let a = [];
-  this.each(() => {
-    a.push(this[Math.floor(Math.random()*this.length)]);
-  });
+  if (!n || n === 1) return this[Math.floor(Math.random()*this.length)];
+  let a = "";
+   for (let i = 0; i < n; i++) {
+    a += this[Math.floor(Math.random()*this.length)];
+  }
   return a;
 }
 
-Array.prototype.median = function () {
+Array.prototype.average = function () {
   let n = 0;
-  this.each((i) => {
-    n += this[i]
-  });
+  this.each( (i) => {n += this[i] });
   return n/this.length;
-}
-
-Array.prototype.copy = function (v) {
-  if(!v) return this;
-  return new Array(v).from(this);
 }
 
 Array.protoype.index = function (n) {
@@ -62,3 +54,4 @@ Array.protoype.index = function (n) {
   })
   return r != 0 ? r : false;
 }
+
