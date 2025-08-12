@@ -49,3 +49,16 @@ Array.prototype.median = function () {
   });
   return n/this.length;
 }
+
+Array.prototype.copy = function (v) {
+  if(!v) return this;
+  return new Array(v).from(this);
+}
+
+Array.protoype.index = function (n) {
+  let r = 0;
+  this.each((i) => {
+    if(n===this[i]) r = i;
+  })
+  return r != 0 ? r : false;
+}
