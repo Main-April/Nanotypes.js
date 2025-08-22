@@ -1,15 +1,16 @@
-// Create a globalValue
+
 Boolean.prototype.link = function (n) {
   globalThis[n] = this.valueOf();
   return this;
 }
-// Example of utilisation :
-/*
-true.link("yes");
-if(yes) {
-  console.log(true);
+
+Boolean.prototype.when = function (c) {
+  if(this.valueOf()){
+    c();
+  }
+  return this;
 }
-*/
+
 Object.defineProperty(Boolean.prototype, "toggle", {
     set(){
         this.valueOf() = !this.valueOf();
