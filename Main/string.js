@@ -5,5 +5,5 @@ String.prototype.for = function (c) {
 };
 
 String.prototype.occurence = function (o) {
-  return this.split(o).length--;
+  return this.split(o).length-1;
 }
