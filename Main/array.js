@@ -1,13 +1,21 @@
-console.log("Loading Nanotypes.js Array module...");
 // Array plugin : 
 // Author : Main-April
-// Last update : 24/09/2025
+// Last update : 254/09/2025
+console.log("Loading Nanotypes.js Array module...");
 
 Array.prototype.each = function(c) {
     for (let i = 0; i < this.length; i++) {
         c(i);
     }
 };
+
+Array.prototype.sum = function() {
+    let n = 0;
+    this.each((i) => {
+        n += this[i];
+    });
+    return n;
+}
 
 Array.prototype.shuffle = function() {
     for (let i = this.length - 1; i > 0; i--) {
@@ -66,17 +74,6 @@ Object.defineProperty(Array.prototype, "average", {
         return n / this.length;
     }
 });
-
-function sum(a) {
-    let n = 0;
-    a.each((v) => {
-        if (typeof a[v] !== "number") {
-            throw new TypeError(`[Nanotypes.js] The function sum cannot add ${typeof a[v]} type`);
-        }
-        n += a[v];
-    });
-    return n;
-}
 
 function range(sa, so, e = 1) {
     let a = new Array();
