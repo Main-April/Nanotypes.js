@@ -1,17 +1,16 @@
-# Minify.js
+# Nanotypes.js
 
-A lightweight JavaScript library designed to simplify web development without Node.js or Python dependencies. Use the familiar `_()` syntax for element selection like jQuery, with full method chaining support.
+A lightweight JavaScript library designed to simplify web development without Node.js or Python dependencies. You can personnalize your experience using the differents files how you want. 
 
 ## Installation
 
 Include these script tags in your HTML file:
 
-### Import Library
+### Import Main File
 ```html
-<script type="module" src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/import.js"></script>
+<script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>
 ```
-
-
+Main File contain the differents method to interact easily with DOM and setup your own website.
 
 ### Complete Setup Example
 ```html
