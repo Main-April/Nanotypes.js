@@ -11,21 +11,18 @@ Include these script tags in your HTML file:
 <script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>
 ```
 Main File contain the differents method to interact easily with DOM and setup your own website.
+This file includes two parts : one for the DOM interactions and the second for JS writing.
 
 ### Complete Setup Example
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Underscore.js Project</title>
+    <title>Unnamed Project</title>
 </head>
 <body>
     <!-- Your content -->
-    <script type="module" src="https://raw.githubusercontent.com/Main-April/Nanofy.js/refs/heads/main/Main/import.js"></script>
-    
-    <script>
-        _('*').css('color', 'blue');
-    </script>
+   <script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>
 </body>
 </html>
 ```
@@ -34,7 +31,7 @@ Main File contain the differents method to interact easily with DOM and setup yo
 
 ### Basic Syntax
 
-You don't have need '.' and '#' before the name of class or id.
+You can use the select function to.
 Select elements using the `_()` function, like $ Jquey syntax :
 
 ```javascript
