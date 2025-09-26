@@ -1,7 +1,6 @@
 // Array plugin : 
 // Author : Main-April
 // Last update : 254/09/2025
-console.log("Loading Nanotypes.js Array module...");
 
 Array.prototype.each = function(c) {
     for (let i = 0; i < this.length; i++) {
@@ -94,4 +93,5 @@ function enumerate(a) {
 function array(...e) {
     return new Array(...e);
 }
+
 
