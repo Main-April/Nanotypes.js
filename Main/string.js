@@ -3,6 +3,8 @@
 // Last update : 24/09/2025
 console.log("Loading Nanotypes.js String module...");
 
+// String module :
+
 String.prototype.each = function(c) {
     for (let i = 0; i < this.length; i++) {
         c(i);
@@ -26,8 +28,21 @@ String.prototype.compareTo = function(s) {
     return n / this.length;
 }
 
+
 Object.defineProperty(String.prototype, "isEmpty", {
     get() {
         return this.trim().length === 0;
     }
 });
+
+// Boolean module :
+
+Boolean.prototype.assign = function(...t) {
+    if (typeof(t) === "string") globalThis[t] = this.valueOf();
+    else a = t;
+    for (let i = 0; i < a.length; i++) {
+        globalThis[a[i]] = this.valueOf();
+    }
+}
+
+console.warn("Nanotypes.js String module loaded.");
