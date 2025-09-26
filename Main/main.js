@@ -32,4 +32,3 @@ function type(e, t) {
     if (!t) return e;
     return e === t.toLowerCase();
 }
-console.warn("Nanotypes.js main module loaded.");
