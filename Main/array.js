@@ -95,5 +95,3 @@ function array(...e) {
     return new Array(...e);
 }
 
-
-console.warn("[Nanotypes.js] Array.js initialised with success !")
