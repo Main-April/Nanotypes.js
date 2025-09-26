@@ -44,5 +44,3 @@ Boolean.prototype.assign = function(...t) {
         globalThis[a[i]] = this.valueOf();
     }
 }
-
-console.warn("Nanotypes.js String module loaded.");
