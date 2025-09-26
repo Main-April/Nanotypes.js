@@ -1,7 +1,7 @@
 // Main File:
 // Author : Main-April
 // Last update : 26/09/2025
-console.log("Loading Nanotypes.js main module...");
+
 // Interacting DOM functions : 
 
 function select(s) {
