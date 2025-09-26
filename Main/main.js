@@ -1,6 +1,8 @@
 // Main File:
 // Author : Main-April
-// Last update : 25/09/2025
+// Last update : 26/09/2025
+console.log("Loading Nanotypes.js main module...");
+// Interacting DOM functions : 
 
 function select(s) {
     let i = document.getElementById(s);
@@ -17,6 +19,7 @@ function css(e, s, v = undefined) {
 }
 
 // Global JS functions
+
 function repeat(n, c) {
     if (type(n) != "number") n = n.length
     for (let i = 0; i < n; i++) {
@@ -24,44 +27,9 @@ function repeat(n, c) {
     }
 }
 
-function isin(e, s) {
-    if (type(s) === "object" || type(s) === "array") {
-        if (s.index(e) != -1) return true
-    }
-    if (type(s) === "string") {
-        if (s.includes(e)) return true
-    }
-    return false;
-}
-
 function type(e, t) {
     e = Object.prototype.toString.call(e).slice(8, -1).toLowerCase();
     if (!t) return e;
     return e === t.toLowerCase();
 }
-
-function max(a) {
-    let m;
-    if (type(a) === "array") {
-        m = a[0];
-        a.each((i) => { if (a[i] > m) m = a[i]; });
-    }
-    if (type(a) === "object") {
-        m = Object.values(a)[0];
-        Object.values(a).forEach((i) => { if (i > m) m = i; });
-    }
-    return m;
-}
-
-function min(a) {
-    let m;
-    if (type(a) === "array") {
-        m = a[0];
-        a.each((i) => { if (a[i] < m) m = a[i]; });
-    }
-    if (type(a) === "object") {
-        m = Object.values(a)[0];
-        Object.values(a).forEach((i) => { if (i < m) m = i; });
-    }
-    return m;
-}
+console.warn("Nanotypes.js main module loaded.");
