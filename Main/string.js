@@ -3,43 +3,67 @@
 // Last update : 24/09/2025
 
 // String module :
-
-String.prototype.each = function(c) {
-    for (let i = 0; i < this.length; i++) {
-        c(i);
+class NString extends String{
+    constructor(e){
+        super(e);
+        this.iterable = true;
     }
-};
-
-String.prototype.reverse = function() {
-    return this.split(" ").reverse().join(" ");
-}
-
-String.prototype.occurenceOf = function(s) {
-    let n = 0;
-    this.each((i) => { if (this[i] === s) n++; });
-    return n;
-}
-
-String.prototype.compareTo = function(s) {
-    s = String(s).substring(0, this.length);
-    let n = 0;
-    this.each((i) => { if (this[i] === s[i]) n++; });
-    return n / this.length;
-}
-
-
-Object.defineProperty(String.prototype, "isEmpty", {
-    get() {
-        return this.trim().length === 0;
+    get reverse(){
+        return this.split("").reverse().join(" ")
     }
-});
+    get isEmpty(){
+        return this.trim()/length === 0;
+    }
+    each(c){
+        for(let i=0;i<this.length;i++){
+            c(i);
+        }
+    }
+    occurenceOf(s){
+        let n = 0;
+        this.each((i)=>{ if (this[i]===s) n++;})
+        return n;
+    }
+}
 
 // Boolean module :
-
-Boolean.prototype.assign = function(...t) {
-    if (typeof(t) === "string") globalThis[t] = this.valueOf();
-    else a = t;
-    for (let i = 0; i < a.length; i++) {
-        globalThis[a[i]] = this.valueOf();
+class NBoolean extends Boolean {
+    constructor(e){
+        super(e);
+        this.iterable = false;
     }
+    assign(...t){
+        if (typeof(t) === "string") globalThis[t] = this.valueOf();
+        else if (a.iterable) a=t;
+        for (let i = 0; i < a.length; i++) {
+            globalThis[a[i]] = this.valueOf();
+        }
+    }
+    and(b){
+        return this.valueOf() && b;
+    }
+    or(b){
+        return this.valueOf() || b;
+    }
+    xor(b){
+        return this.valueOf() != b;
+    }
+}
+
+function all(...c) {
+    let n = 0;
+    for (let i = 0; i < c.length; i++) {
+        if (c[i]) n++;
+    }
+    return n / c.length == 1;
+}
+
+function when(c, f) {
+    setInterval(() => {
+        if (c()) f();
+    }, 0);
+}
+
+function not(c) {
+    return !c;
 }
