@@ -33,6 +33,3 @@ function importFile(file) {
 }
 
 install();
-DOMregister();
-
-
