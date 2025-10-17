@@ -4,12 +4,29 @@
 
 // Interacting DOM functions : 
 
+// A quick selection of an element
 function select(s) {
     let i = document.getElementById(s);
     let c = document.getElementsByClassName(s)
     if (i) return i;
     if (c && c.length > 0) return c;
     return document.querySelector(s)
+}
+
+// Record all under-element of an element and declare a var with her
+function selectAll(s){
+    let e = select(s).querySelectorAll("*");
+    let i = 0;
+    e.forEach((el)=>{
+        i++;
+        let en = el.id||el.name||el.type||el.classList[0]||`element${i}`
+        try{
+            globalThis[en]=el;
+        }
+        catch(err){
+            globalThis["N"+en]=el;
+        }
+    })
 }
 
 function css(e, s, v = undefined) {
@@ -31,4 +48,5 @@ function type(e, t) {
     e = Object.prototype.toString.call(e).slice(8, -1).toLowerCase();
     if (!t) return e;
     return e === t.toLowerCase();
+
 }
