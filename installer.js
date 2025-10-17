@@ -1,4 +1,5 @@
 const files = [
+    "object.js",
     "main.js",
     "array.js",
     "string.js",
@@ -30,4 +31,5 @@ function importFile(file) {
             console.warn("[Nanotypes.js].Installer.js : " + file + " loaded with success !");
         });
 }
+
 install();
