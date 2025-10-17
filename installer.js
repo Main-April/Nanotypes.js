@@ -5,7 +5,7 @@ const files = [
     "string.js",
 ];
 
-await function install(file) {
+function install(file) {
     if (file) return importFile(file);
     console.log("Installing Nanotypes.js ...");
     console.log("File to load : " + files.length);
@@ -34,4 +34,5 @@ function importFile(file) {
 
 install();
 DOMregister();
+
 
