@@ -14,18 +14,9 @@ function select(s) {
 }
 
 // Record all under-element of an element and declare a var with her
-function selectAll(s){
-    let e = select(s).querySelectorAll("*");
-    let i = 0;
-    e.forEach((el)=>{
-        i++;
-        let en = el.id||el.name||el.type||el.classList[0]||`element${i}`
-        try{
-            globalThis[en]=el;
-        }
-        catch(err){
-            globalThis["N"+en]=el;
-        }
+function DOMregister(){
+    document.querySelectorAll("*").forEach((e)=>{
+        globalThis[(e.id||e.classList[0]||e.type||e.tagName).toLowerCase()]=e;
     })
 }
 
@@ -50,3 +41,4 @@ function type(e, t) {
     return e === t.toLowerCase();
 
 }
+
