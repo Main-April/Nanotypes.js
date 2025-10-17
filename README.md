@@ -8,7 +8,7 @@ Include these script tags in your HTML file:
 
 ### Import Installer File
 ```html[
-<script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>](https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/installer.js"></script>
+<script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/installer.js"></script>
 ```
 Installer File automatically import all file in the Main folder.
 You can use the plugin with the function importFile(String filename)
