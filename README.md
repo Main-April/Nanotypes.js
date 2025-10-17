@@ -6,12 +6,12 @@ A lightweight JavaScript library designed to simplify web development without No
 
 Include these script tags in your HTML file:
 
-### Import Main File
-```html
-<script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>
+### Import Installer File
+```html[
+<script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>](https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/installer.js"></script>
 ```
-Main File contain the differents method to interact easily with DOM and setup your own website.
-This file includes two parts : one for the DOM interactions and the second for JS writing.
+Installer File automatically import all file in the Main folder.
+You can use the plugin with the function importFile(String filename)
 
 ### Complete Setup Example
 ```html
